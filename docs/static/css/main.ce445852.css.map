@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.ce445852.css","mappings":"AAAA,MACE,YAAa,CACb,qBAAsB,CACtB,QAAS,CAHX,cAKI,WAAY","sources":["styles/App.scss"],"sourcesContent":[".form{\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  .button{\n    width: 250px;\n  }\n}"],"names":[],"sourceRoot":""}
