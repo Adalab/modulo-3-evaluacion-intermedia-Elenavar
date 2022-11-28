@@ -12,7 +12,6 @@ function App() {
   });
   const [searchCounselor, setSearchCounselor] = useState('');
   const [searchName, setSearchName] = useState('');
-
   const table = data
     .filter(
       (adalaber) =>
@@ -146,6 +145,7 @@ function App() {
             <th>Nombre</th>
             <th>Tutora</th>
             <th>Especialidad</th>
+            <th>Redes Sociales</th>
           </tr>
         </thead>
         <tbody key="004">{table}</tbody>
