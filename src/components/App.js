@@ -49,6 +49,38 @@ function App() {
     });
   };
 
+  const filterForm = () => {
+    return (
+      <>
+        <div className="searchName">
+          <label htmlFor="searchName">Nombre:</label>
+          <input
+            id="searchName"
+            type="text"
+            placeholder="Ej: MariCarmen"
+            onChange={handleFilterName}
+            value={searchName}
+          ></input>
+        </div>
+
+        <div className="searchCounselor">
+          <label htmlFor="filter">Escoge una Tutora:</label>
+          <select
+            id="filter"
+            onChange={handleFilterCounselor}
+            value={searchCounselor}
+          >
+            <option>Escoge una opción</option>
+            <option>Yanelis</option>
+            <option>Dayana</option>
+            <option>Iván</option>
+            <option>Miguel</option>
+          </select>
+        </div>
+      </>
+    );
+  };
+
   const handleFilterCounselor = (ev) => {
     setSearchCounselor(ev.target.value);
   };
@@ -107,29 +139,7 @@ function App() {
       <header className="header">
         <h1>Adalabers</h1>
       </header>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="searchName">Nombre:</label>
-        <input
-          id="searchName"
-          type="text"
-          placeholder="Ej: MariCarmen"
-          onChange={handleFilterName}
-          value={searchName}
-        ></input>
-
-        <label htmlFor="filter">Escoge una Tutora:</label>
-        <select
-          id="filter"
-          onChange={handleFilterCounselor}
-          value={searchCounselor}
-        >
-          <option>Escoge una opción</option>
-          <option>Yanelis</option>
-          <option>Dayana</option>
-          <option>Iván</option>
-          <option>Miguel</option>
-        </select>
-      </form>
+      <form onSubmit={handleSubmit}>{filterForm()}</form>
       <table className="table">
         <thead key="001">
           <tr key="002">
