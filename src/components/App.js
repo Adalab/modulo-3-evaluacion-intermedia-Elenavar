@@ -39,8 +39,15 @@ function App() {
   };
 
   const handleAdd = () => {
-    setData([...data, newAdalaber]);
-    console.log(data);
+    if (
+      newAdalaber.name !== '' &&
+      newAdalaber.counselor !== '' &&
+      newAdalaber.speciality !== ''
+    ) {
+      setData([...data, newAdalaber]);
+    } else {
+      window.alert('Fill in all the gaps');
+    }
     setNewAdalaber({
       name: '',
       counselor: '',
